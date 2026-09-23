@@ -1,0 +1,145 @@
+=== PAGE 1 ===
+AUSTIN GIFFEN 
+AUSTIN.GIFFEN@YALE.EDU | 1-(208)-995-3914 | HTTPS://WWW.LINKEDIN.COM/IN/AUSTIN-GIFFEN-56A09431A/  
+2024 U.S. Presidential Scholar, National Merit Scholar 
+EDUCATION 
+Yale University (GPA: 3.91)                                                                                                           ​
+                       
+New Haven, CT 
+    Major: Electrical Engineering                                                                                                                           
+Graduating Fall 2027 
+●​
+Relevant Courses 
+●​
+Probabilistic Machine Learning, Quantum Information Processing and Communication, Mechatronics 
+Laboratory, Circuits and Systems Design, Digital Systems, Information Systems, Intensive Physics 
+(classical mechanics/special relativity), Modern Physical Measurement, Linear Algebra, Computer 
+Engineering, Intensive Physics (E&M/special relativity/quantum mechanics), Electromagnetic Waves 
+and Devices, Electronics, Communications and Control 
+ 
+WORK EXPERIENCE 
+Avishtech: Electrical Engineering Intern 
+●​
+Built analytical via in cavity models that match full wave model accuracy in orders of magnitude 
+less time up to 40GHz 
+●​
+Built models in Sonnet and OpenEMS to validate analytical model for a variety of canonical 
+structures. 
+ 
+Yale Undergraduate Research Assistant — Konezny Lab                                                           January 
+2025 - January 2026 
+●​
+Recipient of the Yale College First-Year Summer Research Fellowship ($5,000 research grant) 
+●​
+Utilized semiconductor principles to evaluate and optimize the conduction mechanisms of CuSCN to 
+improve its potential as a hole transport layer material in solar cells. 
+●​
+Designed and assembled gas flow control system using Arduino, mass flow controllers, and LabVIEW 
+for precise hydrogen/oxygen doping experiments. 
+●​
+Developed Python scripts to process experimental data, compute conductivity, and generate visual 
+correlations. 
+●​
+Reviewed and applied findings from academic literature to refine experimental design and interpret 
+discrepancies in conductivity behavior. 
+ 
+https://docs.google.com/presentation/d/1e6wMXEWEJpyx848cdU-yQOiMJCMuljVILvgJ71IJeLk/edit?slide=i
+d.g28067cb0407_0_1#slide=id.g28067cb0407_0_1  
+ 
+ 
+Yale Undergraduate Research Assistant — Jung Han Lab                                                                   
+January 2026 - Present 
+●​
+Developed and optimized machine-learning models (Random Forest, cross-validated grid search) in 
+Python to predict glucose levels from optical spectroscopy sensor signals. 
+Lead Sailing Instructor for Southern Idaho Sailing Association                                                         May 
+2022 - August 2024  
+●​
+Worked with two other instructors to run sailing camps for beginner through advanced sailors.  
+Soccer Referee                                                                                                                                       January 
+2022 - June 2024   
+●​
+NFHS, SWISRA, SISL certified – Officiated DPL League, ECNL League, and state tournaments. 
+ 
+PROJECTS 
+=== PAGE 2 ===
+●​
+Yale CubeSat (satellite) Cosmic Ray Detector Subteam Co-Lead                                              
+September 2024 - Present 
+●​
+Coordinate with NASA regarding launch plans and progress, Lead and coordinated subteam projects, 
+collaborated with other subsystem leads, and supported outreach initiatives 
+●​
+Developed the complete cosmic ray detector schematic and PCB from negative voltage rail, multiple 
+stage amplifiers, comparators, DACs, counter ICs, temperature sensors, boost converters, and 
+multiplexers. 
+●​
+Designed a precision negative voltage rail PCB using a 555 timer IC (NE555) and operational 
+amplifier. 
+●​
+Performed component selection and bill of materials optimization. 
+●​
+Simulated all circuits in KiCad using SPICE models for each component to validate gain, noise, 
+timing response, and power behavior before fabrication. 
+●​
+Tested and validated the detector subsystem through bench measurements, debugging, calibration, and 
+data analysis from local cosmic-ray counts to confirm proper functionality. 
+●​
+Mind Vault App  
+●​
+Engineered a full-stack learning ecosystem leveraging React, TypeScript, Node.js/Express, and 
+Firebase Firestore inside a pnpm monorepo to convert AI responses and video content into 
+active-recall quizzes. 
+●​
+Developed a Manifest V3 Chrome Extension (React/Vite) that injects context-aware capture triggers 
+across ChatGPT, Gemini, Claude, and YouTube for seamless content capture. 
+●​
+Architected shared core libraries (quiz-engine) to unify flashcard evaluation, streak management, and 
+gamification logic across both the web client and browser extension. 
+ 
+●​
+AnalogLab Platform: 
+●​
+Unified Developer Platform: Built an end-to-end platform enabling developers to sample data, train, 
+and deploy edge compute models onto diverse analog AI backends. 
+●​
+Broad Architecture Coverage: Designed general-purpose model translation pipelines supporting 
+Continuous-Time Analog, Compute-In-Memory (CIM) crossbars, and Event-Driven Neuromorphic 
+chips—covering 95% of analog edge silicon. 
+●​
+Automated SDK Interoperability: Standardized output files to compile seamlessly into chip-specific 
+SDK toolchains, eliminating hardware-dependent code rewrites. 
+ 
+●​
+Developed a Hardware-Aware Software Layer (HASL) compiler framework to translate Bayesian 
+Neural Networks (BNNs) into physically realizable analog memristive crossbar circuit netlists for 
+uncertainty-aware edge computing.                                             2026 Spring Semester        
+●​
+Optimized Variational Training: Formulated a hardware-penalized Evidence Lower Bound 
+($\text{ELBO}_\Gamma$) incorporating experimental memristor constraints ($\sigma = h(\mu)$), 
+halving the parameter search space by expressing weight variance directly as a function of mean 
+conductance.   
+●​
+Minimized Routing Architecture Costs: Mathematically proved that memristive crossbar topology 
+achieves the theoretical minimum allocation cost ($Cost(\mathcal{A}_{\text{crossbar}}) = \sum 
+n_{l-1} \cdot n_l$) for forward-pass probabilistic inference by minimizing inter-block data 
+movement. 
+●​
+Derived Sampling Convergence Guarantees: Extended the compiled hardware substrate into an analog 
+iterative sampler using Equilibrium Propagation (EP) and the Unadjusted Langevin Algorithm (ULA), 
+establishing explicit KL-divergence convergence bounds under physical device noise. 
+ 
+●​
+Automated AI Video Generation Pipeline (Docker, CometAPI, Sora-2/Gemini)                                         
+Summer 2025 
+●​
+Built and deployed a fully automated, Dockerized video generation system on a headless server, 
+integrating CometAPI (Sora-2 / Gemini Flash Lite) to generate short-form videos from dynamically 
+created prompts. 
+●​
+Implemented end-to-end automation including prompt generation from trending YouTube data, 
+=== PAGE 3 ===
+scheduled execution, secure credential management, OAuth token refresh, and programmatic 
+YouTube uploads via the YouTube Data API. 
+ 
+ 

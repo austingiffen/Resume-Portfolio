@@ -1,0 +1,194 @@
+=== PAGE 1 ===
+Enhancing CuSCN’s Electrical Properties through Hydrogenation and Oxygenation 
+for Solar Applications
+Austin Giffen, Max Colomer, Steven J. Konezny
+Departments of Physics and Chemistry, Energy Sciences Institute, Yale University, 810 West Campus Drive, New Haven, Connecticut, 06516, United States
+Advancing renewable energy sources like solar is crucial in our fight against 
+climate change and energy shortages that lead to widespread humanitarian 
+crises. Solar devices specifically can be drastically improved through 
+enhancing the hole transport layer (HTL) which facilitates electron hole 
+movement out of the absorption layer and into the electrical load, reducing 
+electron-hole recombination, subsequently improving device efficiency. 
+Fig 1: Conventional solar cell model with hole movement and HTL shown in color
+While poly(3,4-ethylenedioxythiophene): poly(styrene sulfonate) is the most 
+commonly employed HTL in solar cells today, it is not optimal for use in solar 
+cells as it is not entirely transparent and detracts from the energy range of 
+photons that can hit the absorption layer to be converted into energy. 
+Additionally, it is very acidic and frequently traps electrons, reducing the 
+number of holes that can facilitate charge transport over time. Copper(I) 
+thiocyanate (CuSCN) has emerged as a promising alternative due to its low 
+cost, high transparency, and superior hole mobility.
+Labview Program Design + Python Data Analysis
+Gas Flow Chamber + Arduino Setup
+                   3 MFCs                                  Arduino + DACs                        SMUs + Gas Chamber  
+We built the Arduino–MFC control loop so the Arduino could both drive the MFCs to 
+produce certain flow rates and read the MFC output to verify they were responding 
+accurately. A DAC converted the Arduino’s control output into the analog signal the 
+MFCs required and an ADC converted the analog output from the MFCs into a signal 
+that the arduino could read. A chip select line was wired to each DAC to toggle between 
+the devices so that only one device was active on the shared data bus at a time, allowing 
+sequential addressing of each MFC without bus contention. 
+Air, Nitrogen, and H₂/N₂ were each routed through an air-actuated valve manifold, 
+which itself was controlled by a Nitrogen line that forked from the main Nitrogen line 
+and was controlled by a pressure actuator. For high-precision conductivity 
+measurements, we used an Agilent source-measure setup with four source-measure 
+units (SMUs) and connected the SMU outputs to the gas-flow chamber using triaxial 
+(triax) cable/guarded connections to minimize leakage and noise during low-current 
+measurements. Occasionally, we wired environmental sensors (light, humidity, 
+temperature, etc.) into some SMU channels, instead of devices. 
+Conclusion
+We developed a LabVIEW application 
+that  opens a serial/VISA connection 
+to 
+the 
+Arduino 
+and 
+Agilent 
+simultaneously, 
+issues 
+write 
+commands to set DAC outputs and 
+actuate valves, then reads back ADC 
+values from the arduino and current 
+values 
+from 
+the 
+agilent 
+in 
+a 
+command–response loop. Through 
+ample testing, we determined the 
+DACs and ADCs had a linear offset, 
+which we accounted for within the 
+labview program. We also applied a 
+known offset due to each gas mixture 
+through the labview program.
+Flow Chamber Results
+Conductivity Trends
+Background
+The strong humidity sensitivity observed in our trials likely masked more 
+nuanced trends that were otherwise expected, making it difficult to isolate 
+other contributing mechanisms. To resolve this, paired exposures using dry, 
+well-characterized synthetic air and ambient humid air could be used to 
+compare conductivity, pressure responses, and gas-switch transients, 
+revealing which effects persist without moisture. Additionally, redesigning 
+the electrode geometry—by narrowing spacing and increasing gold surface 
+area—could 
+test 
+whether 
+electrode-mediated 
+H₂ 
+splitting 
+or 
+surface-area-driven processes are responsible for the doping effects reported 
+in 
+the 
+literature. 
+Combined 
+with 
+time-series 
+measurements 
+and 
+surface-sensitive techniques such as XPS, these approaches could help 
+disentangle 
+humidity-related, 
+electrode-driven, 
+and 
+intrinsic 
+aging 
+mechanisms, 
+offering 
+pathways 
+to 
+stabilize 
+and 
+enhance 
+CuSCN 
+conductivity for solar applications.
+Fig 2 shows the conductivity trends of various samples left in ambient conditions 
+over the span of 175 days 
+Fresh Sample  (49 days old but in vacuum/glove 
+box)
+Aged (643 days old in various environments)
+We found that CuSCN samples left in ambient conditions for multiple 
+months exhibited orders of magnitude increased conductivity.
+- Grazing incidence X-ray diffraction (GIXRD) analysis showed no 
+change in crystallinity
+- Placing samples in a vacuum yielded lower conductivity, ruling out 
+evaporation
+- XPS showed an increase in C=N double bonds and a decrease in 
+C≡N triple bonds
+The python script parses LabVIEW output 
+into a single time-sorted DataFrame. It 
+infers column names, concatenates files, 
+inserts NaN rows at large time gaps, and 
+vectorizes PPM/flow calculations so gas 
+composition and total flow are computed 
+for every timestamp. Then it segments 
+data by gas-exposure intervals to shade 
+those periods, for an easy comparison 
+between current and gas. It  automatically 
+scales current units while overlaying a 
+twin y-axis for H₂ ppm, flow rate, LED 
+status, and humidity sensing.  
+Fig 3 Hardware setup for gas 
+flow control and conductivity 
+measurements
+Fig 4 labview control panel and python 
+data analysis snapshot
+We did not observe the 40% increase in conductivity that was achieved 
+in previous literature with the same Hydrogen gas ratio
+This could be due to various factors:
+- Most likely device shape: 400 microns vs. 5 microns distance 
+between electrodes
+- There is not enough Au per surface of CuSCN to catalyze the 
+reaction involving Hydrogen
+- Gas flow rates: 4000 sccm vs. 500 sccm
+- Volume of chamber: ~200mL  vs. 1L
+Conductivity is very sensitive to humidity: Air ~ 12% RH, N2~ 0% RH
+- Short Term: High RH = Low Current
+Differences btw Fresh and Aged samples:
+- Startup current/Peak heights/Average current values
+LED 
+causes 
+photovoltaic 
+jump in current:
+- Medium Term (16 hours): 
+Higher Intensity = Higher 
+Current
+Long 
+after 
+exposure, 
+however, the conductivity of 
+samples are often slightly 
+lower due to light  damage. 
+Fig 5 Graphs of current vs. time under varying gas/light  exposure
+These 
+long-term 
+patterns 
+motivated us to investigate 
+whether 
+the 
+underlying 
+mechanisms 
+could 
+be 
+observed 
+on 
+shorter 
+timescales, 
+to 
+better 
+understand the origin of the 
+conductivity 
+increase. 
+A 
+real-time 
+gas 
+exposure 
+experiment was designed to 
+monitor how the samples 
+respond 
+to 
+changing 
+conditions as they occur.
