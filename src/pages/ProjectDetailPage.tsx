@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PROJECTS_DATA } from '../data/projectsData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const ProjectDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -62,7 +63,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="hardware-grid">
               <div className="hardware-card">
                 <div className="hardware-img-wrapper">
-                  <img src="/images/cuscn/poster_img_6_21.jpeg" alt="3 Mass Flow Controllers (MFCs)" />
+                  <img src={getAssetUrl('/images/cuscn/poster_img_6_21.jpeg')} alt="3 Mass Flow Controllers (MFCs)" />
                 </div>
                 <div className="hardware-caption">
                   <strong>3 Mass Flow Controllers (MFCs)</strong>
@@ -72,7 +73,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper">
-                  <img src="/images/cuscn/poster_img_7_22.jpeg" alt="Arduino + DAC Control Circuitry" />
+                  <img src={getAssetUrl('/images/cuscn/poster_img_7_22.jpeg')} alt="Arduino + DAC Control Circuitry" />
                 </div>
                 <div className="hardware-caption">
                   <strong>Arduino & DAC/ADC Circuitry</strong>
@@ -82,7 +83,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper">
-                  <img src="/images/cuscn/poster_img_8_23.jpeg" alt="SMUs & Gas Chamber Test Setup" />
+                  <img src={getAssetUrl('/images/cuscn/poster_img_8_23.jpeg')} alt="SMUs & Gas Chamber Test Setup" />
                 </div>
                 <div className="hardware-caption">
                   <strong>SMUs & Gas Test Chamber</strong>
@@ -95,7 +96,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="labview-card-wrapper">
               <div className="labview-card">
                 <div className="labview-img-wrapper">
-                  <img src="/images/cuscn/poster_img_10_25.jpeg" alt="LabVIEW Control Suite & Data Analysis" />
+                  <img src={getAssetUrl('/images/cuscn/poster_img_10_25.jpeg')} alt="LabVIEW Control Suite & Data Analysis" />
                 </div>
                 <div className="figure-caption">
                   <strong>LabVIEW Setup & Python Data Analysis Pipeline: </strong>
@@ -116,7 +117,7 @@ export const ProjectDetailPage: React.FC = () => {
             {/* Featured Breakthrough: img11 */}
             <div className="results-card-large">
               <div className="results-img-large">
-                <img src="/images/cuscn/poster_img_11_26.jpeg" alt="Ambient Aging Conductivity Trends" />
+                <img src={getAssetUrl('/images/cuscn/poster_img_11_26.jpeg')} alt="Ambient Aging Conductivity Trends" />
               </div>
               <div className="results-content">
                 <h3>Multi-Order-of-Magnitude Conductivity Surge via Ambient Aging</h3>
@@ -141,7 +142,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="results-grid-2col">
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '240px' }}>
-                  <img src="/images/cuscn/poster_img_12_28.jpeg" alt="Real-Time Current Response (Trial 1)" />
+                  <img src={getAssetUrl('/images/cuscn/poster_img_12_28.jpeg')} alt="Real-Time Current Response (Trial 1)" />
                 </div>
                 <div className="hardware-caption">
                   <strong>Real-Time Gas & Photovoltaic Dynamics (Trial 1)</strong>
@@ -156,7 +157,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '240px' }}>
-                  <img src="/images/cuscn/poster_img_13_31.jpeg" alt="Fresh vs Aged Conduction Dynamics (Trial 2)" />
+                  <img src={getAssetUrl('/images/cuscn/poster_img_13_31.jpeg')} alt="Fresh vs Aged Conduction Dynamics (Trial 2)" />
                 </div>
                 <div className="hardware-caption">
                   <strong>Fresh vs. Aged Conduction Kinetics (Trial 2)</strong>
@@ -191,8 +192,8 @@ export const ProjectDetailPage: React.FC = () => {
                   playsInline 
                   className="mindvault-video-player"
                 >
-                  <source src="/images/MindVault/MindVault-ScreenRecording-h264.mp4" type="video/mp4" />
-                  <source src="/images/MindVault/MindVault-ScreenRecording.mp4" type="video/mp4" />
+                  <source src={getAssetUrl('/images/MindVault/MindVault-ScreenRecording-h264.mp4')} type="video/mp4" />
+                  <source src={getAssetUrl('/images/MindVault/MindVault-ScreenRecording.mp4')} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -294,9 +295,6 @@ export const ProjectDetailPage: React.FC = () => {
                   <p style={{ marginTop: '0.4rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                     • <strong>30V Step-Up Boost</strong>: High-voltage boost converter provides precise reverse bias for SiPM Geiger-mode avalanche breakdown operation.
                   </p>
-                  <p style={{ marginTop: '0.35rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                    • <strong>555 Charge-Pump Inverter</strong>: Generates a clean negative voltage rail (-5V) for dual-supply op-amps, enabling AC-coupled high-frequency signal processing without ground rail clipping.
-                  </p>
                 </div>
               </div>
             </div>
@@ -305,7 +303,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="labview-card-wrapper" style={{ maxWidth: '600px', margin: '2rem auto' }}>
               <div className="labview-card">
                 <div className="labview-img-wrapper" style={{ maxHeight: '320px' }}>
-                  <img src="/images/cubesat/schematic_555_negative_rail.png" alt="555 Timer Negative Voltage Rail Schematic" />
+                  <img src={getAssetUrl('/images/cubesat/schematic_555_negative_rail.png')} alt="555 Timer Negative Voltage Rail Schematic" />
                 </div>
                 <div className="figure-caption">
                   <strong>Schematic 1: 555-Timer Negative Rail Charge-Pump Circuit — </strong>
@@ -347,7 +345,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="results-grid-2col" style={{ marginTop: '2rem' }}>
               <div className="labview-card">
                 <div className="labview-img-wrapper" style={{ maxHeight: '280px' }}>
-                  <img src="/images/cubesat/schematic_lt1818_amplifier.png" alt="LT1818 High-Speed Op-Amp Amplifier Circuit" />
+                  <img src={getAssetUrl('/images/cubesat/schematic_lt1818_amplifier.png')} alt="LT1818 High-Speed Op-Amp Amplifier Circuit" />
                 </div>
                 <div className="figure-caption">
                   <strong>Schematic 2: LT1818 Dual Op-Amp Amplifier — </strong>
@@ -357,7 +355,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="labview-card">
                 <div className="labview-img-wrapper" style={{ maxHeight: '280px' }}>
-                  <img src="/images/cubesat/schematic_max9108_comparator.png" alt="MAX9108 Comparator Stage Schematic" />
+                  <img src={getAssetUrl('/images/cubesat/schematic_max9108_comparator.png')} alt="MAX9108 Comparator Stage Schematic" />
                 </div>
                 <div className="figure-caption">
                   <strong>Schematic 3: MAX9108 High-Speed Comparator Stage — </strong>
@@ -450,7 +448,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="hardware-grid">
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '220px' }}>
-                  <img src="/images/Avishtech/G1.png" alt="G1 Single Via Response" />
+                  <img src={getAssetUrl('/images/Avishtech/G1.png')} alt="G1 Single Via Response" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G1: Single Through Via</strong>
@@ -460,7 +458,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '220px' }}>
-                  <img src="/images/Avishtech/G2.png" alt="G2 Short Stub Response" />
+                  <img src={getAssetUrl('/images/Avishtech/G2.png')} alt="G2 Short Stub Response" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G2: Short-Stubbed Via</strong>
@@ -470,7 +468,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '220px' }}>
-                  <img src="/images/Avishtech/G3.png" alt="G3 Long Stub Resonance" />
+                  <img src={getAssetUrl('/images/Avishtech/G3.png')} alt="G3 Long Stub Resonance" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G3: Long-Stubbed Via</strong>
@@ -484,7 +482,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="results-grid-2col">
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G4.png" alt="G4 Differential Via Pair" />
+                  <img src={getAssetUrl('/images/Avishtech/G4.png')} alt="G4 Differential Via Pair" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G4: Differential Via Pair Transmission</strong>
@@ -494,7 +492,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G5.png" alt="G5 40-mil Pitch Pair Layout" />
+                  <img src={getAssetUrl('/images/Avishtech/G5.png')} alt="G5 40-mil Pitch Pair Layout" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G5: 40-mil Pitch Pair Geometry</strong>
@@ -504,7 +502,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G5 differential.png" alt="G5 Differential Mode S-Parameters" />
+                  <img src={getAssetUrl('/images/Avishtech/G5 differential.png')} alt="G5 Differential Mode S-Parameters" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G5: Differential Mode Signal Integrity</strong>
@@ -514,7 +512,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G5 cross talk.png" alt="G5 Far-End Differential Crosstalk" />
+                  <img src={getAssetUrl('/images/Avishtech/G5 cross talk.png')} alt="G5 Far-End Differential Crosstalk" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G5: Far-End Differential Crosstalk (FEXT)</strong>
@@ -528,7 +526,7 @@ export const ProjectDetailPage: React.FC = () => {
             <div className="results-grid-2col">
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G6.png" alt="G6 3x3 Array Geometry" />
+                  <img src={getAssetUrl('/images/Avishtech/G6.png')} alt="G6 3x3 Array Geometry" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G6: 3x3 Array Constellation Layout</strong>
@@ -538,7 +536,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G6 through.png" alt="G6 Outer Via Through Transmission" />
+                  <img src={getAssetUrl('/images/Avishtech/G6 through.png')} alt="G6 Outer Via Through Transmission" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G6: Outer Via Through Transmission</strong>
@@ -548,7 +546,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G6 center through.png" alt="G6 Center Via Through Transmission" />
+                  <img src={getAssetUrl('/images/Avishtech/G6 center through.png')} alt="G6 Center Via Through Transmission" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G6: Center Via Through Transmission</strong>
@@ -558,7 +556,7 @@ export const ProjectDetailPage: React.FC = () => {
 
               <div className="hardware-card">
                 <div className="hardware-img-wrapper" style={{ height: '230px' }}>
-                  <img src="/images/Avishtech/G6 cross talk to corner.png" alt="G6 Aggressor-to-Corner Crosstalk" />
+                  <img src={getAssetUrl('/images/Avishtech/G6 cross talk to corner.png')} alt="G6 Aggressor-to-Corner Crosstalk" />
                 </div>
                 <div className="hardware-caption">
                   <strong>G6: Aggressor-to-Corner Crosstalk</strong>
@@ -581,7 +579,7 @@ export const ProjectDetailPage: React.FC = () => {
                 <figure key={fig.id} className="figure-card">
                   <div className="figure-img-wrapper">
                     <img 
-                      src={fig.imagePath} 
+                      src={getAssetUrl(fig.imagePath)} 
                       alt={fig.title} 
                       className="figure-img"
                     />

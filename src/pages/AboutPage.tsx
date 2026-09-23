@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const AboutPage: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ export const AboutPage: React.FC = () => {
       {/* Profile Photo Card */}
       <div className="profile-section" style={{ padding: '1.25rem', border: '1px solid var(--border-color)', borderRadius: '6px', backgroundColor: 'rgba(26,26,26,0.015)' }}>
         <img 
-          src="/images/profile.png" 
+          src={getAssetUrl('/images/profile.png')} 
           alt="Austin Giffen" 
           className="profile-avatar"
           style={{ width: '90px', height: '90px' }}
@@ -94,7 +95,7 @@ export const AboutPage: React.FC = () => {
       {/* Résumé Link */}
       <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
         <a 
-          href="/Full Resume_Portfolio for Personal Website.pdf" 
+          href={getAssetUrl('/Full Resume_Portfolio for Personal Website.pdf')} 
           target="_blank" 
           rel="noopener noreferrer" 
           className="cta-button"

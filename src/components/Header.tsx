@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const Header: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ export const Header: React.FC = () => {
           Background
         </NavLink>
         <a 
-          href="/Full Resume_Portfolio for Personal Website.pdf" 
+          href={getAssetUrl('/Full Resume_Portfolio for Personal Website.pdf')} 
           target="_blank" 
           rel="noopener noreferrer" 
           className="nav-link"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PROJECTS_DATA } from '../data/projectsData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const HomePage: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ export const HomePage: React.FC = () => {
       {/* Profile Avatar & Intro Section */}
       <section className="profile-section">
         <img 
-          src="/images/profile.png" 
+          src={getAssetUrl('/images/profile.png')} 
           alt="Austin Giffen" 
           className="profile-avatar"
           onError={(e) => {
@@ -42,7 +43,7 @@ export const HomePage: React.FC = () => {
         </Link>
 
         <a 
-          href="/Full Resume_Portfolio for Personal Website.pdf" 
+          href={getAssetUrl('/Full Resume_Portfolio for Personal Website.pdf')} 
           target="_blank" 
           rel="noopener noreferrer" 
           className="project-card"
