@@ -8,7 +8,7 @@ export const AboutPage: React.FC = () => {
       <h1 className="page-title">Experience, Skills & Honors</h1>
       
       <p className="lead-text">
-        B.S. Electrical Engineering, Yale University — Class of 2027 (GPA: 3.91).
+        B.S. Electrical Engineering, Yale University — Class of 2028 (GPA: 3.91).
       </p>
 
       {/* Profile Photo Card */}

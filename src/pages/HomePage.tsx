@@ -18,7 +18,7 @@ export const HomePage: React.FC = () => {
           }}
         />
         <div className="profile-bio">
-          <div className="meta-subtitle">Electrical Engineering · Yale '27</div>
+          <div className="meta-subtitle">Electrical Engineering · Yale '28</div>
           <h1 className="hero-title">
             I design high speed analytical PCB models, space systems, and semiconductor research hardware.
           </h1>
